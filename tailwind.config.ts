@@ -103,6 +103,9 @@ export default {
         "blink": {
           "50%": { borderColor: "transparent" },
         },
+        "border-beam": {
+          "100%": { "stroke-dashoffset": "-200%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -114,6 +117,7 @@ export default {
         "float": "float 3s ease-in-out infinite",
         "typewriter": "typewriter 3.5s steps(40, end) forwards",
         "blink": "blink 0.75s step-end infinite",
+        "border-beam": "border-beam 4s linear infinite",
       },
     },
   },

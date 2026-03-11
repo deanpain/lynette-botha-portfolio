@@ -77,8 +77,23 @@ const HeroSection = () => {
           {/* Right image */}
           <div ref={rightRef} className={`order-1 md:order-2 transition-all duration-700 delay-200 ${rightVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="relative group">
-              {/* Rotating Glow Border */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-accent via-gold/50 to-accent rounded-sm blur opacity-25 group-hover:opacity-100 animate-rotating-glow transition duration-1000 group-hover:duration-200"></div>
+              {/* Border Beam SVG (Perimeter Trace) */}
+              <svg
+                className="absolute -inset-[2px] w-[calc(100%+4px)] h-[calc(100%+4px)] pointer-events-none z-10"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+              >
+                <rect
+                  x="0" y="0" width="100" height="100"
+                  rx="2" ry="2"
+                  fill="none"
+                  stroke="hsl(var(--accent))"
+                  strokeWidth="3"
+                  strokeDasharray="30 70"
+                  pathLength="100"
+                  className="animate-border-beam opacity-40 group-hover:opacity-100 transition-opacity duration-500"
+                />
+              </svg>
 
               <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-background">
                 <img
@@ -89,7 +104,7 @@ const HeroSection = () => {
                 />
               </div>
               {/* Decorative border */}
-              <div className="absolute -bottom-4 -right-4 w-full h-full border border-accent/30 rounded-sm -z-10" />
+              <div className="absolute -bottom-4 -right-4 w-full h-full border border-accent/20 rounded-sm -z-10" />
             </div>
           </div>
         </div>
