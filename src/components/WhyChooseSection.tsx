@@ -40,7 +40,7 @@ const WhyChooseSection = () => {
         <div className="grid md:grid-cols-3 gap-12 md:gap-16">
           {reasons.map((reason, i) => (
             <div key={reason.title} className={`text-center space-y-4 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: isVisible ? `${200 + i * 150}ms` : '0ms' }}>
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full border border-accent/30 text-accent">
+              <div className={`inline-flex items-center justify-center w-14 h-14 rounded-full border border-accent/30 text-accent ${isVisible ? 'animate-float' : ''}`} style={{ animationDelay: `${i * 0.5}s` }}>
                 <reason.icon size={24} strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-semibold text-foreground">{reason.title}</h3>

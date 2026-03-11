@@ -29,8 +29,8 @@ const PortfolioSection = () => {
 
         <div ref={gridRef} className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {magazines.map((mag, i) => (
-            <div key={mag.title} className={`group cursor-pointer transition-all duration-700 ${gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: gridVisible ? `${i * 100}ms` : '0ms' }}>
-              <div className="relative aspect-[3/4] overflow-hidden rounded-sm bg-muted">
+            <div key={mag.title} className={`group cursor-pointer transition-all duration-700 ${gridVisible ? 'animate-slide-in-right' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: gridVisible ? `${i * 150}ms` : '0ms' }}>
+              <div className="relative aspect-[3/4] overflow-hidden rounded-sm bg-muted shadow-lg hover:shadow-accent/20 transition-all duration-500">
                 <img
                   src={mag.image}
                   alt={`${mag.title} magazine cover`}

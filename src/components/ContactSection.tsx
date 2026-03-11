@@ -41,7 +41,7 @@ const ContactSection = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className={`space-y-6 transition-all duration-1000 delay-300 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium text-foreground">
