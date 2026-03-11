@@ -4,11 +4,8 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Publishing", href: "#services" },
-  { label: "Editing", href: "#services" },
-  { label: "Ad Partners", href: "#services" },
+  { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
-  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -33,7 +30,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button variant="gold" size="sm" asChild>
-            <a href="#contact">Get Started</a>
+            <a href="#contact">Contact</a>
           </Button>
         </nav>
 
@@ -62,7 +59,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button variant="gold" size="sm" asChild>
-              <a href="#contact" onClick={() => setOpen(false)}>Get Started</a>
+              <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
             </Button>
           </div>
         </nav>
