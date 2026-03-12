@@ -78,7 +78,12 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif;
   }
 }
@@ -91,6 +96,36 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Pure CSS Typewriter Animation */
+.anim-typewriter {
+  overflow: hidden;
+  border-right: 2px solid hsl(var(--accent));
+  white-space: nowrap;
+  display: inline-block;
+  animation: typewriter 4s steps(38) 1s 1 normal both,
+    blinkTextCursor 500ms steps(38) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: hsl(var(--accent));
+  }
+
+  to {
+    border-right-color: transparent;
+  }
 }
 
 /* Pure CSS Border Trace Animation */
@@ -126,15 +161,20 @@ html {
 }
 
 @keyframes clipMe {
-  0%, 100% {
+
+  0%,
+  100% {
     clip-path: inset(0 0 calc(100% - 2px) 0);
   }
+
   25% {
     clip-path: inset(0 calc(100% - 2px) 0 0);
   }
+
   50% {
     clip-path: inset(calc(100% - 2px) 0 0 0);
   }
+
   75% {
     clip-path: inset(0 0 0 calc(100% - 2px));
   }

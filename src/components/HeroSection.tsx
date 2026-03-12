@@ -56,7 +56,7 @@ const HeroSection = () => {
               <p className="text-sm font-medium tracking-[0.2em] uppercase text-accent">
                 Award-Winning Editor
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] text-foreground text-balance overflow-hidden border-r-2 border-accent inline-block whitespace-nowrap animate-typewriter animate-blink">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] text-foreground text-balance anim-typewriter">
                 Magazine Publishing & Editing Services
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">

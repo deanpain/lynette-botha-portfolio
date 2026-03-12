@@ -93,13 +93,6 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
-        "typewriter": {
-          from: { width: "0" },
-          to: { width: "100%" },
-        },
-        "blink": {
-          "50%": { borderColor: "transparent" },
-        },
 
       },
       animation: {
@@ -109,8 +102,6 @@ export default {
         "fade-in": "fade-in 0.6s ease-out forwards",
         "slide-in-right": "slide-in-right 0.8s ease-out forwards",
         "float": "float 3s ease-in-out infinite",
-        "typewriter": "typewriter 3.5s steps(40, end) forwards",
-        "blink": "blink 0.75s step-end infinite",
       },
     },
   },
