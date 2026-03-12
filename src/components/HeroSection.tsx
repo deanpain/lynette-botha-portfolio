@@ -41,6 +41,37 @@ const StatCounter = ({ value, suffix, isVisible }: { value: number; suffix: stri
   );
 };
 
+const TypewriterText = ({ text, speed = 80, delay = 1000 }: { text: string; speed?: number; delay?: number }) => {
+  const [displayedText, setDisplayedText] = useState('');
+  const [started, setStarted] = useState(false);
+
+  useEffect(() => {
+    const delayTimer = setTimeout(() => setStarted(true), delay);
+    return () => clearTimeout(delayTimer);
+  }, [delay]);
+
+  useEffect(() => {
+    if (!started) return;
+    let i = 0;
+    const timer = setInterval(() => {
+      if (i < text.length) {
+        setDisplayedText(text.slice(0, i + 1));
+        i++;
+      } else {
+        clearInterval(timer);
+      }
+    }, speed);
+    return () => clearInterval(timer);
+  }, [text, speed, started]);
+
+  return (
+    <>
+      {displayedText}
+      <span className="typewriter-cursor">&thinsp;</span>
+    </>
+  );
+};
+
 const HeroSection = () => {
   const { ref: leftRef, isVisible: leftVisible } = useScrollAnimation(0.1);
   const { ref: rightRef, isVisible: rightVisible } = useScrollAnimation(0.1);
@@ -56,8 +87,8 @@ const HeroSection = () => {
               <p className="text-sm font-medium tracking-[0.2em] uppercase text-accent">
                 Award-Winning Editor
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] text-foreground text-balance anim-typewriter">
-                Magazine Publishing & Editing Services
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] text-foreground text-balance">
+                <TypewriterText text="Magazine Publishing & Editing Services" />
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
                 Crafting luxury magazines that captivate audiences and maximize revenue.

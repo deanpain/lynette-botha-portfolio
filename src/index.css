@@ -98,24 +98,10 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Pure CSS Typewriter Animation */
-.anim-typewriter {
-  overflow: hidden;
+/* Pure CSS Typewriter Cursor */
+.typewriter-cursor {
   border-right: 2px solid hsl(var(--accent));
-  white-space: nowrap;
-  display: inline-block;
-  animation: typewriter 4s steps(38) 1s 1 normal both,
-    blinkTextCursor 500ms steps(38) infinite normal;
-}
-
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
+  animation: blinkTextCursor 500ms infinite normal;
 }
 
 @keyframes blinkTextCursor {
