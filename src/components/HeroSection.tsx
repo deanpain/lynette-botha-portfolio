@@ -76,25 +76,7 @@ const HeroSection = () => {
 
           {/* Right image */}
           <div ref={rightRef} className={`order-1 md:order-2 transition-all duration-700 delay-200 ${rightVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <div className="relative group">
-              {/* Border Beam SVG (Perimeter Trace) */}
-              <svg
-                className="absolute -inset-[2px] w-[calc(100%+4px)] h-[calc(100%+4px)] pointer-events-none z-10"
-                viewBox="0 0 100 100"
-                preserveAspectRatio="none"
-              >
-                <rect
-                  x="0" y="0" width="100" height="100"
-                  rx="2" ry="2"
-                  fill="none"
-                  stroke="hsl(var(--accent))"
-                  strokeWidth="3"
-                  strokeDasharray="30 70"
-                  pathLength="100"
-                  className="animate-border-beam opacity-40 group-hover:opacity-100 transition-opacity duration-500"
-                />
-              </svg>
-
+            <div className="relative group border-trace">
               <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-background">
                 <img
                   src={heroImage}
