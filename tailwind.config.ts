@@ -104,7 +104,7 @@ export default {
           "50%": { borderColor: "transparent" },
         },
         "border-beam": {
-          "100%": { "stroke-dashoffset": "-200%" },
+          "100%": { "stroke-dashoffset": "-100%" },
         },
       },
       animation: {
@@ -117,7 +117,7 @@ export default {
         "float": "float 3s ease-in-out infinite",
         "typewriter": "typewriter 3.5s steps(40, end) forwards",
         "blink": "blink 0.75s step-end infinite",
-        "border-beam": "border-beam 40s linear infinite",
+        "border-beam": "border-beam 80s linear infinite",
       },
     },
   },
